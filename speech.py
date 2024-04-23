@@ -38,32 +38,31 @@ def speak(audio):
 def wishMe():
 	hour = int(datetime.datetime.now().hour)
 	if hour>= 0 and hour<12:
-		speak("Good Morning Sir !")
+		speak("Good Morning Go shujin saama !")
 
 	elif hour>= 12 and hour<18:
-		speak("Good Afternoon Sir !") 
+		speak("Good Afternoon Go shujin saama !") 
 
 	else:
-		speak("Good Evening Sir !") 
+		speak("Good Evening Go shujin saama!") 
 
-	assname =("Jarvis 1 point o")
+	assname =("Robin Dhami")
 	speak(f"I am your Assistant {assname}")
 	
 	
 
 def username():
 	# speak("What should i call you sir")
-    # uname= takeCommand()
-	uname = "Robin Dhami"
-	speak("Welcome Mister")
-	speak(uname)
-	columns = shutil.get_terminal_size().columns
+    uname= takeCommand()
+    speak("Welcome Mister")
+    speak(uname)
+    columns = shutil.get_terminal_size().columns
 	
-	print("#####################".center(columns))
-	print("Welcome Mr.", uname.center(columns))
-	print("#####################".center(columns))
-	
-	speak("How can i Help you, Sir")
+    print("#####################".center(columns))
+    print("Welcome Mr.", uname.center(columns))
+    print("#####################".center(columns))
+        
+    speak("How can i Help you, Sir")
 
 def takeCommand():
 	
