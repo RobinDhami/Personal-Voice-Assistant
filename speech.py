@@ -24,6 +24,7 @@ from ecapture import ecapture as ec
 from bs4 import BeautifulSoup
 import win32com.client as wincl
 from urllib.request import urlopen
+from setuptools import distutils
 
 
 engine = pyttsx3.init('sapi5')
@@ -46,13 +47,14 @@ def wishMe():
 	else:
 		speak("Good Evening Go shujin saama!") 
 
-	assname =("Robin Dhami")
+	assname =(" Yor Forger")
 	speak(f"I am your Assistant {assname}")
 	
 	
 
-def username():
+def username():    
 	# speak("What should i call you sir")
+    speak("What should i call you go shujin sama")
     uname= takeCommand()
     speak("Welcome Mister")
     speak(uname)
@@ -77,7 +79,7 @@ def takeCommand():
 	try:
 		print("Recognizing...") 
 		query = r.recognize_google(audio, language ='en-in')
-		print(f"User said: {query}\n")
+		speak(query)
 
 	except Exception as e:
 		print(e) 
